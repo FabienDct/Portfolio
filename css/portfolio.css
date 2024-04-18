@@ -16,12 +16,13 @@ body.landing{
 
 a{
     text-decoration: none;
+    color: inherit
 }
 a:visited{
     color: inherit
 }
 a:link{
-    color: inherit
+    color: inherit;
 }
 
 /* Header */
