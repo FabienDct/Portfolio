@@ -16,10 +16,10 @@ body.landing{
 
 a{
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 a:visited{
-    color: inherit
+    color: inherit;
 }
 a:link{
     color: inherit;
