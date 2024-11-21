@@ -13,24 +13,27 @@ const project_items  = document.querySelectorAll(".project-item");
 
 
 for (let i = 0; i < btns.length; i++){
-    btns[i].addEventListener('click',filterproject);
+    btns[i].addEventListener('click',function(){
+        filterproject(btns[i]);
+    });
+    //btns[i].addEventListener('click',filterproject);
 }
 
-function setActiveBtn(e){
+function setActiveBtn(buttonElem){
     btns.forEach(btn => {
         btn.classList.remove('active');
     });
-    e.target.classList.add('active');
+    buttonElem.classList.add('active');
 }
 
-function filterproject(e){
-    setActiveBtn(e);
+function filterproject(buttonElem){
+    setActiveBtn(buttonElem);
 
     project_items.forEach(project_item =>{
         project_item.classList.add("inactive");
 
         const projectType = project_item.dataset.project;
-        const btnType = e.target.dataset.btn;
+        const btnType = buttonElem.dataset.btn;
 
         if(projectType == btnType){
             project_item.classList.remove("inactive");
